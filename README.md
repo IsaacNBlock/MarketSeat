@@ -4,14 +4,13 @@ Auction-based marketplace prototype for sports tickets. Sellers list with a rese
 
 ## Live Site
 
-- Deployed on Vercel: <YOUR_VERCEL_URL>
+- Deployed on Vercel: https://market-seat.vercel.app/
 
 ## Product Requirements Document (PRD)
 
 - PRD location: [projectDocs/PRD.md](projectDocs/PRD.md)
 
 ## Overview
-
 - Tech: Vanilla HTML, CSS, JavaScript (no frameworks)
 - Prototype features:
   - Create listing with reserve and optional Buy Now
