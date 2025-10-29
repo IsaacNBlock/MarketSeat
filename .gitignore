@@ -1,0 +1,17 @@
+# macOS
+.DS_Store
+
+# Node/Vercel (future-proof)
+node_modules/
+.vercel/
+.env
+.env.*
+
+# Build artifacts
+dist/
+build/
+.out/
+
+# Editors
+.vscode/
+.idea/

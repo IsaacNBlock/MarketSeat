@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MarketSeat - Auction Prototype</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="app-header">
+    <h1>MarketSeat</h1>
+    <p class="tagline">Auction-based marketplace for sports tickets</p>
+  </header>
+
+  <main class="container">
+    <section class="card" id="create-listing">
+      <h2>Create Listing</h2>
+      <form id="listing-form">
+        <div class="grid-2">
+          <label>Event
+            <input type="text" id="eventName" placeholder="e.g., Knicks vs. Nets" required />
+          </label>
+          <label>Sport
+            <select id="sport" required>
+              <option value="Basketball">Basketball</option>
+              <option value="Football">Football</option>
+              <option value="Baseball">Baseball</option>
+              <option value="Hockey">Hockey</option>
+              <option value="Soccer">Soccer</option>
+            </select>
+          </label>
+        </div>
+        <div class="grid-3">
+          <label>Section
+            <input type="text" id="section" placeholder="e.g., 116" required />
+          </label>
+          <label>Row
+            <input type="text" id="row" placeholder="e.g., 10" required />
+          </label>
+          <label>Quantity
+            <input type="number" id="quantity" min="1" value="2" required />
+          </label>
+        </div>
+        <div class="grid-3">
+          <label>Reserve Price ($)
+            <input type="number" id="reservePrice" min="0" step="1" placeholder="e.g., 120" required />
+          </label>
+          <label>Buy Now ($)
+            <input type="number" id="buyNowPrice" min="0" step="1" placeholder="Optional" />
+          </label>
+          <label>Ends In (minutes)
+            <input type="number" id="endsInMinutes" min="1" step="1" value="10" required />
+          </label>
+        </div>
+        <button type="submit" class="btn primary">Create Listing</button>
+        <p id="formMessage" class="muted"></p>
+      </form>
+    </section>
+
+    <section class="card" id="browse">
+      <h2>Browse Listings</h2>
+      <div class="filters">
+        <label>Filter by sport
+          <select id="filterSport">
+            <option value="">All sports</option>
+            <option value="Basketball">Basketball</option>
+            <option value="Football">Football</option>
+            <option value="Baseball">Baseball</option>
+            <option value="Hockey">Hockey</option>
+            <option value="Soccer">Soccer</option>
+          </select>
+        </label>
+        <label>Filter by event
+          <input type="text" id="filterEvent" placeholder="Search by event name" />
+        </label>
+      </div>
+      <div id="listingList" class="listings"></div>
+      <p id="emptyState" class="muted">No listings yet. Create one above.</p>
+    </section>
+
+    <section class="card" id="detail" hidden>
+      <button id="backToBrowse" class="btn">← Back to Browse</button>
+      <div id="detailContent"></div>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <small>Prototype only. Payments and transfers are simulated.</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
